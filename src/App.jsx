@@ -5,7 +5,7 @@ import About from './component/About'
 import Hero from './component/Hero'
 import Contact from './component/Contact'
 import Footer from './component/Footer'
-
+  
 function App() {
   const [count, setCount] = useState(0)
 
