@@ -1,5 +1,4 @@
 import { Target, Lightbulb, Shield, Users } from "lucide-react";
-import bgImage from "../assets/himgiri.jpg"; // <-- put your image here
 
 export default function About() {
   const values = [
@@ -30,47 +29,44 @@ export default function About() {
   ];
 
   return (
-    <section
-      id="about"
-      className="relative py-24 px-6 bg-cover bg-center text-white"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
-
-      <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Small intro paragraph only */}
+    <section className="bg-gray-50 py-20">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-lg text-gray-200 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            About Hostel Attendance Portal
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Hostel Attendance Portal simplifies attendance tracking for
             educational institutions through secure, innovative, and
             user-friendly technology.
           </p>
         </div>
 
-        {/* Glass-style values section */}
+        {/* Core Values */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, i) => (
             <div
               key={i}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-lg hover:bg-white/20 transition-all duration-300 text-center"
+              className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 text-center border border-gray-100"
             >
-              <div className="h-14 w-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <value.icon className="h-7 w-7 text-blue-300" />
+              <div className="h-14 w-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <value.icon className="h-7 w-7 text-blue-600" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {value.title}
               </h3>
-              <p className="text-gray-200 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {value.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Team info */}
+        {/* Simple Team Preview */}
         <div className="mt-20 text-center">
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Team</h3>
+          <p className="text-gray-600 max-w-2xl mx-auto">
             A passionate group of developers, educators, and designers committed
             to transforming attendance management across institutions.
           </p>
