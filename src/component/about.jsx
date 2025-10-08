@@ -10,7 +10,7 @@ export default function About() {
     },
     {
       icon: Lightbulb,
-      title: "Innovation"
+      title: "Innovation",
       description:
         "Evolving continuously with cutting-edge technology and thoughtful design.",
     },
