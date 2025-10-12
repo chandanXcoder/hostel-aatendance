@@ -219,4 +219,3 @@ export default function Footer() {
 
 
 
-6yuu
