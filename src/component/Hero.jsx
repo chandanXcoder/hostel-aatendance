@@ -11,7 +11,7 @@ export default function Hero() {
   const features = [
     'Real-time attendance tracking',
     'Automated report generation',
-    'SMS & Email notifications',
+    'SMS & Email notifications',   sdsf
     'Multi-user access control'
   ];
 
