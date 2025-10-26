@@ -32,15 +32,15 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="backdrop-blur-md bg-white/10 border-b border-white/20 sticky top-0 z-50 shadow-sm transition-all duration-300">
+    <nav className="backdrop-blur-md bg-white/90 border-b border-gray-200 sticky top-0 z-50 shadow-md transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Brand Logo */}
           <div className="flex items-center space-x-3">
-            <div className="bg-blue-500/90 p-2 rounded-xl shadow-md backdrop-blur-sm">
+            <div className="bg-blue-600 p-2 rounded-xl shadow-md">
               <ClipboardCheck className="h-6 w-6 text-white" />
             </div>
-            <h1 className="text-white text-lg sm:text-xl font-semibold tracking-wide drop-shadow-md">
+            <h1 className="text-gray-900 text-lg sm:text-xl font-semibold tracking-wide">
               Hostel Attendance Portal
             </h1>
           </div>
@@ -50,7 +50,7 @@ export default function Navbar() {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                className="flex items-center gap-2 text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                className="flex items-center gap-2 text-gray-800 hover:text-blue-600 hover:bg-blue-100/40 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               >
                 <item.icon className="h-4 w-4" />
                 {item.name}
@@ -67,15 +67,15 @@ export default function Navbar() {
                   setShowNotifications(!showNotifications);
                   setShowProfile(false);
                 }}
-                className="p-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 relative"
+                className="p-2 rounded-full text-gray-800 hover:text-blue-600 hover:bg-blue-100/40 transition-all duration-200 relative"
               >
                 <Bell className="h-5 w-5" />
                 <span className="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full"></span>
               </button>
 
               {showNotifications && (
-                <div className="absolute right-0 mt-3 w-80 bg-white/90 backdrop-blur-md rounded-lg shadow-2xl border border-white/20 overflow-hidden">
-                  <div className="p-4 border-b border-white/30 bg-white/10">
+                <div className="absolute right-0 mt-3 w-80 bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+                  <div className="p-4 border-b border-gray-100 bg-gray-50">
                     <h3 className="text-sm font-semibold text-gray-800">
                       Notifications
                     </h3>
@@ -84,16 +84,16 @@ export default function Navbar() {
                     {notifications.map((notif) => (
                       <div
                         key={notif.id}
-                        className="p-4 hover:bg-white/30 cursor-pointer transition-all duration-150"
+                        className="p-4 hover:bg-gray-100 cursor-pointer transition-all duration-150"
                       >
                         <p className="text-sm text-gray-800">{notif.text}</p>
-                        <p className="text-xs text-gray-600 mt-1">
+                        <p className="text-xs text-gray-500 mt-1">
                           {notif.time}
                         </p>
                       </div>
                     ))}
                   </div>
-                  <div className="p-3 text-center bg-white/10">
+                  <div className="p-3 text-center bg-gray-50">
                     <button className="text-sm text-blue-600 hover:text-blue-800 font-medium">
                       View all
                     </button>
@@ -109,9 +109,9 @@ export default function Navbar() {
                   setShowProfile(!showProfile);
                   setShowNotifications(false);
                 }}
-                className="flex items-center gap-2 px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200"
+                className="flex items-center gap-2 px-3 py-2 rounded-full text-gray-800 hover:text-blue-600 hover:bg-blue-100/40 transition-all duration-200"
               >
-                <div className="h-8 w-8 bg-blue-500 rounded-full flex items-center justify-center shadow-md">
+                <div className="h-8 w-8 bg-blue-600 rounded-full flex items-center justify-center shadow-md">
                   <User className="h-5 w-5 text-white" />
                 </div>
                 <span className="hidden lg:block text-sm font-medium">
@@ -120,24 +120,24 @@ export default function Navbar() {
               </button>
 
               {showProfile && (
-                <div className="absolute right-0 mt-3 w-56 bg-white/90 backdrop-blur-md rounded-lg shadow-2xl border border-white/20 overflow-hidden">
-                  <div className="p-4 border-b border-white/30 bg-white/10">
+                <div className="absolute right-0 mt-3 w-56 bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+                  <div className="p-4 border-b border-gray-100 bg-gray-50">
                     <p className="text-sm font-semibold text-gray-800">
                       Administrator
                     </p>
-                    <p className="text-xs text-gray-600">admin@hostel.com</p>
+                    <p className="text-xs text-gray-500">admin@hostel.com</p>
                   </div>
                   <div className="py-2">
-                    <button className="w-full flex items-center gap-2 px-4 py-2 text-sm text-gray-800 hover:bg-white/30 transition-all">
+                    <button className="w-full flex items-center gap-2 px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 transition-all">
                       <User className="h-4 w-4" />
                       Profile
                     </button>
-                    <button className="w-full flex items-center gap-2 px-4 py-2 text-sm text-gray-800 hover:bg-white/30 transition-all">
+                    <button className="w-full flex items-center gap-2 px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 transition-all">
                       <Settings className="h-4 w-4" />
                       Settings
                     </button>
-                    <hr className="border-white/20 my-2" />
-                    <button className="w-full flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-100/60 transition-all">
+                    <hr className="border-gray-200 my-2" />
+                    <button className="w-full flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-100 transition-all">
                       <LogOut className="h-4 w-4" />
                       Logout
                     </button>
@@ -149,7 +149,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all"
+              className="md:hidden p-2 text-gray-800 hover:text-blue-600 hover:bg-blue-100/40 rounded-md transition-all"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -159,12 +159,12 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white/10 backdrop-blur-md border-t border-white/20">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-2">
             {navItems.map((item) => (
               <button
                 key={item.name}
-                className="flex items-center gap-3 w-full text-left text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg text-base transition-all"
+                className="flex items-center gap-3 w-full text-left text-gray-800 hover:text-blue-600 hover:bg-blue-100/40 px-3 py-2 rounded-lg text-base transition-all"
               >
                 <item.icon className="h-5 w-5" />
                 {item.name}
@@ -176,4 +176,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
