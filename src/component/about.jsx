@@ -59,7 +59,7 @@ export default function About() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 {value.description}
               </p>
-            </div>
+            </div>  
           ))}
         </div>
 
