@@ -71,7 +71,7 @@ export default function About() {
             to transforming attendance management across institutions.
           </p>
         </div>
-      </div> fd
+      </div> 
     </section>
   );
 }
