@@ -185,7 +185,7 @@ export default function Footer() {
                 All rights reserved.
               </p>
             </div>
-
+87dcz8a
             {/* Social Links */}
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (
